@@ -54,9 +54,9 @@ int main() {
 
 //fonctions&procédures
 
-//BUT
-//ENTREE
-//SORTIE
+//BUT	Afficher un menu à l'utilisateur
+//ENTREE	
+//SORTIE	Menu
 int menu() {
 	int choix = 0;
 
@@ -73,9 +73,9 @@ int menu() {
 	return choix;
 }
 
-//BUT
-//ENTREE
-//SORTIE
+//BUT	Ajouter une carte dans le tableau
+//ENTREE	Les parametres a inserer dans le tableau
+//SORTIE	Si la saisie a fonctionner
 void addCard(carte carteID[])
 {
 	int vide = findEmpty(carteID);
@@ -115,9 +115,9 @@ void addCard(carte carteID[])
 	system("pause");
 }
 
-//BUT
-//ENTREE
-//SORTIE
+//BUT	Verifier les ID de chaque carte jusqu'a ce qu'un ID soit egal a 0
+//ENTREE	Les ID de chaque carte
+//SORTIE	premier ID de la carte égal à 0
 int findEmpty(carte carteID[])
 {
 	int i = 1;
@@ -129,9 +129,9 @@ int findEmpty(carte carteID[])
 	return i;
 }
 
-//BUT
-//ENTREE
-//SORTIE
+//BUT	Afficher la carte d'identité de la carte associé à l'ID demander
+//ENTREE	ID de la carte à afficher
+//SORTIE	paramètres lié à la carte
 void affiche(carte carteID[])
 {
 	int id = 0;
@@ -153,9 +153,9 @@ void affiche(carte carteID[])
 	system("pause");
 }
 
-//BUT
-//ENTREE
-//SORTIE
+//BUT	Modifier les paramètres de la carte lié à l'ID entrer
+//ENTREE	ID et paramètres pour la modif de la carte
+//SORTIE	Si la saisie est correcte et paramètres sont modifiés
 void modifCard(carte carteID[])
 {
 	int id = 0;
@@ -173,7 +173,7 @@ void modifCard(carte carteID[])
 			string statement;
 			system("cls");
 
-			cin.ignore();//vide memoire cin
+			cin.ignore();//vide buffer
 
 			carteID[id].setID(id);
 
@@ -208,9 +208,9 @@ void modifCard(carte carteID[])
 	system("pause");
 }
 
-//BUT
-//ENTREE
-//SORTIE
+//BUT	Suppression d'une carte par l'ID
+//ENTREE	ID de la carte à supprimer
+//SORTIE	supression de la carte
 void deleteCard(carte carteID[])
 
 {
